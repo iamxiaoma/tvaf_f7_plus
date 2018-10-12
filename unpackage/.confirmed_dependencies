@@ -1,0 +1,6 @@
+{
+  "dist/index.html": {
+    "href": "dist/index.html",
+    "priority": 0
+  }
+}

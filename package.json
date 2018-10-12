@@ -1,0 +1,37 @@
+{
+  "name": "tvaf_f7_plus",
+  "version": "0.1.0",
+  "author": "iamxiaoma<395487290@qq.com>",
+  "private": false,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "test:unit": "vue-cli-service test:unit"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "framework7": "^3.4.0",
+    "framework7-icons": "^0.9.1",
+    "framework7-vue": "^3.4.0",
+    "vue": "^2.5.17",
+    "vue-i18n": "^8.1.0",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1",
+    "weixin-js-sdk": "^1.4.0-test"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.4",
+    "@vue/cli-plugin-eslint": "^3.0.4",
+    "@vue/cli-plugin-unit-mocha": "^3.0.4",
+    "@vue/cli-service": "^3.0.4",
+    "@vue/eslint-config-standard": "^3.0.5",
+    "@vue/test-utils": "^1.0.0-beta.20",
+    "chai": "^4.1.2",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.1",
+    "vue-template-compiler": "^2.5.17"
+  }
+}
