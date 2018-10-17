@@ -68,17 +68,27 @@
 </template>
 
 <style lang="scss">
- /*隐藏头部标题栏的时候，需要去掉 page-content 的顶部外边距*/
+/*隐藏头部标题栏的时候，需要去掉 page-content 的顶部外边距*/
 .page.no-navbar {
   .page-content {
     padding-top: 0px;
   }
 }
- /*隐藏底部栏的时候，需要去掉 page-content 的底部外边距*/
+/*隐藏底部栏的时候，需要去掉 page-content 的底部外边距*/
 .page.no-toolbar {
   .page-content {
     padding-bottom: 0px;
   }
+}
+
+input,
+textarea {
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  /*解决加入js后input框输入瞬间变白的现象*/
 }
 </style>
 
@@ -117,7 +127,7 @@ export default {
           }
         }
       },
-      pushState: false,  // 打包 app 的情况下，必须关闭 pushState 模式
+      pushState: false, // 打包 app 的情况下，必须关闭 pushState 模式
       pushStateRoot: "http://localhost:8080",
       pushStateSeparator: ""
     };

@@ -16,6 +16,7 @@ import H5Plus from '@/views/h5plus/index.vue'
 import Accelerometer from '@/views/h5plus/accelerometer.vue'
 
 export default [{
+    name: 'home',
     path: '/',
     alias: '/#',
     component: HomePage,
@@ -24,6 +25,7 @@ export default [{
     },
   },
   {
+    name: 'member',
     path: '/member/',
     component: MemberPage,
     options: {

@@ -1,6 +1,9 @@
 {
-  "dist/index.html": {
-    "href": "dist/index.html",
-    "priority": 0
-  }
+	"dist/index.html": {
+		"href": "dist/index.html",
+		"priority": 0,
+		"resources": [
+			"dist/js/chunk-vendors.099a5c9b.js"
+		]
+	}
 }

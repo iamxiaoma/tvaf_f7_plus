@@ -1,4 +1,4 @@
-﻿{
+{
 	"@platforms": [
 		"android",
 		"iPhone",
@@ -166,7 +166,11 @@
 		"pages": {
 			"dist/index.html": {
 				"href": "dist/index.html",
-				"priority": 0
+				"priority": 0,
+				"resources": [
+					"dist/js/chunk-vendors.099a5c9b.js"
+				],
+				"refer": []
 			}
 		},
 		"idle": {

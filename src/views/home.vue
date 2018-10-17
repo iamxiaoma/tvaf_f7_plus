@@ -74,7 +74,8 @@
 </template>
 <script>
 import { mapState } from "vuex";
-import { WXJSSDK } from "@/js/wx_jssdk_mixin.js";
+import { WXJSSDK } from "@/mixins/wx_jssdk.js";
+import { BackButton } from "@/mixins/backbutton.js";
 import store from "@/store";
 import { switchTabActive } from "@/store/actions";
 
@@ -91,7 +92,7 @@ export default {
       plusReady: state => state.plusReady
     })
   },
-  mixins: [WXJSSDK],
+  mixins: [WXJSSDK, BackButton],
   mounted: function() {
     var that = this;
     // that.$nextTick(function() {
@@ -99,7 +100,9 @@ export default {
     //   that.updateShareConfigInfo();
     // });
     that.$f7ready(f7 => {
-      console.log("home f7 ready");
+      console.log("home f7 ready", f7);
+      var currentRoute = that.$f7route;
+      console.log("router", currentRoute);
       switchTabActive(store, {
         active: "home"
       });

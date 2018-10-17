@@ -9,7 +9,7 @@
 
 <script>
 import { mapState } from "vuex";
-import { WXJSSDK } from "@/js/wx_jssdk_mixin.js";
+import { WXJSSDK } from "@/mixins/wx_jssdk.js";
 import store from "@/store";
 import { switchTabActive } from "@/store/actions";
 

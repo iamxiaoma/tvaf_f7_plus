@@ -2,7 +2,7 @@
 
 ## Project setup
 ```
-npm install
+npm install   安装报错请切换为 cnpm install ，需要先安装 npm install -g cnpm --registry=https://registry.npm.taobao.org
 ```
 
 ### Compiles and hot-reloads for development
