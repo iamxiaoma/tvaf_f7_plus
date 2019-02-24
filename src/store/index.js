@@ -18,7 +18,7 @@ export default new Vuex.Store({
     version: '1.0.0',
     member: cache.get('member') || null, // 用户信息
     lang: cache.get('lang') || 'zh', // 当前的语言版本，默认为简体中文
-    token: cache.get('token') || '', // 登录状态调用接口的token
+    token: cache.get('token') || '' // 登录状态调用接口的token
   },
   mutations,
   actions,

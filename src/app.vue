@@ -1,69 +1,101 @@
 <template>
   <div id="app">
     <!-- App -->
-  <f7-app :params="f7params">
+    <f7-app :params="f7params">
+      <!-- Statusbar -->
+      <f7-statusbar></f7-statusbar>
 
-    <!-- Statusbar -->
-    <f7-statusbar></f7-statusbar>
+      <!-- Left Panel -->
+      <f7-panel left reveal theme-dark>
+        <f7-view id="panel_left" url="/panel-left/"></f7-view>
+      </f7-panel>
 
-    <!-- Left Panel -->
-    <f7-panel left reveal theme-dark>
-      <f7-view id="panel_left" url="/panel-left/"></f7-view>
-    </f7-panel>
+      <!-- Right Panel -->
+      <f7-panel right cover theme-dark>
+        <f7-view id="panel_right" url="/panel-right/"></f7-view>
+      </f7-panel>
 
-    <!-- Right Panel -->
-    <f7-panel right cover theme-dark>
-      <f7-view id="panel_right" url="/panel-right/"></f7-view>
-    </f7-panel>
-
-    <!-- Main View -->
-    <f7-view @init="main_view_init" id="main-view" url="/" main class='ios-edges' :pushState="pushState" :pushStateRoot="pushStateRoot" :pushStateSeparator="pushStateSeparator">
-      <f7-toolbar tabbar labels>
-        <f7-link href="/" tab-link="" :tab-link-active="tab_active == 'home'" text="首页" icon-ios="f7:home_fill"></f7-link>
-        <f7-link href="/f7demos/" tab-link="" :tab-link-active="tab_active == 'f7demos'" text="F7Demos" icon-ios="f7:tabs_fill"></f7-link>
-        <f7-link href="/h5plus/" tab-link="" :tab-link-active="tab_active == 'h5plus'" text="H5Plus" icon-ios="f7:briefcase_fill"></f7-link>
-        <f7-link href="/member/" tab-link="" :tab-link-active="tab_active == 'member'" text="我的" icon-ios="f7:person_fill"></f7-link>
-      </f7-toolbar>
-    </f7-view>
-
-    <!-- Popup -->
-    <f7-popup id="popup">
-      <f7-view id="popup_view">
-        <f7-page>
-          <f7-navbar title="Popup">
-            <f7-nav-right>
-              <f7-link popup-close>Close</f7-link>
-            </f7-nav-right>
-          </f7-navbar>
-          <f7-block>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, architecto. Cupiditate laudantium rem nesciunt numquam, ipsam. Voluptates omnis, a inventore atque ratione aliquam. Omnis iusto nemo quos ullam obcaecati, quod.</f7-block>
-        </f7-page>
+      <!-- Main View -->
+      <f7-view
+        @init="main_view_init"
+        id="main-view"
+        url="/"
+        main
+        class="ios-edges"
+        :pushState="pushState"
+        :pushStateRoot="pushStateRoot"
+        :pushStateSeparator="pushStateSeparator"
+      >
+        <f7-toolbar tabbar labels>
+          <f7-link
+            href="/"
+            tab-link
+            :tab-link-active="tab_active == 'home'"
+            text="首页"
+            icon-ios="f7:home_fill"
+          ></f7-link>
+          <f7-link
+            href="/f7demos/"
+            tab-link
+            :tab-link-active="tab_active == 'f7demos'"
+            text="F7Demos"
+            icon-ios="f7:tabs_fill"
+          ></f7-link>
+          <f7-link
+            href="/h5plus/"
+            tab-link
+            :tab-link-active="tab_active == 'h5plus'"
+            text="H5Plus"
+            icon-ios="f7:briefcase_fill"
+          ></f7-link>
+          <f7-link
+            href="/member/"
+            tab-link
+            :tab-link-active="tab_active == 'member'"
+            text="我的"
+            icon-ios="f7:person_fill"
+          ></f7-link>
+        </f7-toolbar>
       </f7-view>
-    </f7-popup>
-    <!-- Login Screen -->
-    <f7-login-screen id="login-screen">
-      <f7-view id="login_screen">
-        <f7-page login-screen>
-          <f7-login-screen-title>Login</f7-login-screen-title>
-          <f7-list form>
-            <f7-list-item>
-              <f7-label>Username</f7-label>
-              <f7-input name="username" placeholder="Username" type="text"></f7-input>
-            </f7-list-item>
-            <f7-list-item>
-              <f7-label>Password</f7-label>
-              <f7-input name="password" type="password" placeholder="Password"></f7-input>
-            </f7-list-item>
-          </f7-list>
-          <f7-list>
-            <f7-list-button title="Sign In" login-screen-close></f7-list-button>
-            <f7-block-footer>
-              <p>Click Sign In to close Login Screen</p>
-            </f7-block-footer>
-          </f7-list>
-        </f7-page>
-      </f7-view>
-    </f7-login-screen>
-  </f7-app>
+
+      <!-- Popup -->
+      <f7-popup id="popup">
+        <f7-view id="popup_view">
+          <f7-page>
+            <f7-navbar title="Popup">
+              <f7-nav-right>
+                <f7-link popup-close>Close</f7-link>
+              </f7-nav-right>
+            </f7-navbar>
+            <f7-block>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, architecto. Cupiditate laudantium rem nesciunt numquam, ipsam. Voluptates omnis, a inventore atque ratione aliquam. Omnis iusto nemo quos ullam obcaecati, quod.</f7-block>
+          </f7-page>
+        </f7-view>
+      </f7-popup>
+      <!-- Login Screen -->
+      <f7-login-screen id="login-screen">
+        <f7-view id="login_screen">
+          <f7-page login-screen>
+            <f7-login-screen-title>Login</f7-login-screen-title>
+            <f7-list form>
+              <f7-list-item>
+                <f7-label>Username</f7-label>
+                <f7-input name="username" placeholder="Username" type="text"></f7-input>
+              </f7-list-item>
+              <f7-list-item>
+                <f7-label>Password</f7-label>
+                <f7-input name="password" type="password" placeholder="Password"></f7-input>
+              </f7-list-item>
+            </f7-list>
+            <f7-list>
+              <f7-list-button title="Sign In" login-screen-close></f7-list-button>
+              <f7-block-footer>
+                <p>Click Sign In to close Login Screen</p>
+              </f7-block-footer>
+            </f7-list>
+          </f7-page>
+        </f7-view>
+      </f7-login-screen>
+    </f7-app>
   </div>
 </template>
 
@@ -127,8 +159,9 @@ export default {
           }
         }
       },
-      pushState: false, // 打包 app 的情况下，必须关闭 pushState 模式
-      pushStateRoot: "http://localhost:8080",
+      pushState: true, // 打包 app 的情况下，必须关闭 pushState 模式
+      // pushStateRoot: "http://localhost:8080",
+      pushStateRoot: "http://h5.szbookmall.fullstack.cn",
       pushStateSeparator: ""
     };
   },
@@ -148,4 +181,3 @@ export default {
   }
 };
 </script>
-

@@ -1,6 +1,6 @@
 import * as types from './mutation-types'
 
-export function plusReady({
+export function plusReady ({
   commit
 }, {
   isReady
@@ -10,33 +10,33 @@ export function plusReady({
   })
 }
 
-export function setWeixin({
+export function setWeixin ({
   commit
 }, {
   weixin
 }) {
-  console.log('setWeixin', weixin);
+  console.log('setWeixin', weixin)
   commit(types.SET_WEIXIN, weixin)
 }
 
-export function initJSSDK({
+export function initJSSDK ({
   commit
 }, {
   init
 }) {
-  console.log('initJSSDK', init);
-  commit(types.INIT_JSSDK, init);
+  console.log('initJSSDK', init)
+  commit(types.INIT_JSSDK, init)
 }
 
 // 登录
-export function login({
+export function login ({
   commit
 }, {
   data
 }) {}
 
 // 设置语言
-export function setLang({
+export function setLang ({
   commit
 }, {
   lang
@@ -46,7 +46,7 @@ export function setLang({
 }
 
 // 切换激活状态的底部栏
-export function switchTabActive({
+export function switchTabActive ({
   commit
 }, {
   active

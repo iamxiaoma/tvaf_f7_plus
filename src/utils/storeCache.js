@@ -1,21 +1,21 @@
 export default class StoreCache {
-  constructor(prefix) {
+  constructor (prefix) {
     this.prefix = prefix ? `${prefix}_` : ''
   }
-  get(key) {
+  get (key) {
     if (localStorage.getItem(this.prefix + key) !== 'undefined') {
       return JSON.parse(localStorage.getItem(this.prefix + key))
     } else {
       return null
     }
   }
-  set(key, value) {
+  set (key, value) {
     localStorage.setItem(this.prefix + key, JSON.stringify(value))
   }
-  remove(key) {
+  remove (key) {
     localStorage.removeItem(this.prefix + key)
   }
-  clear() {
+  clear () {
     localStorage.clear()
   }
 }

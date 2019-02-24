@@ -22,7 +22,7 @@ export default [{
     component: HomePage,
     options: {
       animate: false
-    },
+    }
   },
   {
     name: 'member',
@@ -30,7 +30,7 @@ export default [{
     component: MemberPage,
     options: {
       animate: false
-    },
+    }
   },
   {
     path: '/f7demos/',

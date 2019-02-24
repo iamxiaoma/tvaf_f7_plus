@@ -62,7 +62,7 @@
         <a href="/tab-3/" class="tab-link" data-route-tab-id="tab-3">Tab 3</a>
       </div>
     </div> -->
-    
+
     <!-- Additional "tabs-routable" is required on tabs -->
     <!-- <div class="tabs tabs-routable">
       <div class="tab page-content" id="tab-1"></div>
@@ -73,18 +73,18 @@
   </f7-page>
 </template>
 <script>
-import { mapState } from "vuex";
-import { WXJSSDK } from "@/mixins/wx_jssdk.js";
-import { BackButton } from "@/mixins/backbutton.js";
-import store from "@/store";
-import { switchTabActive } from "@/store/actions";
+import { mapState } from 'vuex'
+import { WXJSSDK } from '@/mixins/wx_jssdk.js'
+import { BackButton } from '@/mixins/backbutton.js'
+import store from '@/store'
+import { switchTabActive } from '@/store/actions'
 
 export default {
-  data() {
+  data () {
     return {
       noNavbar: false,
       noToolbar: false
-    };
+    }
   },
   computed: {
     ...mapState({
@@ -93,46 +93,46 @@ export default {
     })
   },
   mixins: [WXJSSDK, BackButton],
-  mounted: function() {
-    var that = this;
+  mounted: function () {
+    var that = this
     // that.$nextTick(function() {
     //   console.log("home nextTick");
     //   that.updateShareConfigInfo();
     // });
     that.$f7ready(f7 => {
-      console.log("home f7 ready", f7);
-      var currentRoute = that.$f7route;
-      console.log("router", currentRoute);
+      console.log('home f7 ready', f7)
+      var currentRoute = that.$f7route
+      console.log('router', currentRoute)
       switchTabActive(store, {
-        active: "home"
-      });
-      //this.$f7.dialog.alert("f7 ready");
+        active: 'home'
+      })
+      // this.$f7.dialog.alert("f7 ready");
       // 切换语言
       // console.log("this.$i18n", this.$i18n);
       // this.$i18n.locale = "en";
-      that.updateShareConfigInfo();
+      that.updateShareConfigInfo()
       if (that.weixin) {
-        that.noNavbar = true;
+        that.noNavbar = true
       }
-    });
+    })
   },
   methods: {
-    updateShareConfigInfo() {
-      var that = this;
-      var title = "我是首页标题";
-      var link = "http://fullstack.cn"; // 分享链接的根域名，必须与对应的微信公众号网页js安全域名保持一致
-      var imgUrl = "http://cdn.framework7.cn/i/aplt.png";
-      var desc = "我是首页内容";
-      that.updateShareConfig(title, link, imgUrl, desc);
+    updateShareConfigInfo () {
+      var that = this
+      var title = '我是首页标题'
+      var link = 'http://fullstack.cn' // 分享链接的根域名，必须与对应的微信公众号网页js安全域名保持一致
+      var imgUrl = 'http://cdn.framework7.cn/i/aplt.png'
+      var desc = '我是首页内容'
+      that.updateShareConfig(title, link, imgUrl, desc)
     },
-    init() {
-      console.log("home page init");
+    init () {
+      console.log('home page init')
     },
-    reinit() {
-      console.log("home page reinit");
-      var that = this;
-      that.updateShareConfigInfo();
+    reinit () {
+      console.log('home page reinit')
+      var that = this
+      that.updateShareConfigInfo()
     }
   }
-};
+}
 </script>

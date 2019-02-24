@@ -1,5 +1,11 @@
 <template>
-  <f7-page name="home" :no-navbar="noNavbar" :no-toolbar="noToolbar" @page:init="init" @page:reinit="reinit">
+  <f7-page
+    name="f7demos"
+    :no-navbar="noNavbar"
+    :no-toolbar="noToolbar"
+    @page:init="init"
+    @page:reinit="reinit"
+  >
     <f7-navbar>
       <f7-nav-title>{{$t('app.page.f7demos')}}</f7-nav-title>
     </f7-navbar>
@@ -46,7 +52,7 @@ export default {
       switchTabActive(store, {
         active: "f7demos"
       });
-      //this.$f7.dialog.alert("f7 ready");
+      // this.$f7.dialog.alert("f7 ready");
       // 切换语言
       // console.log("this.$i18n", this.$i18n);
       // this.$i18n.locale = "en";

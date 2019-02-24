@@ -17,15 +17,15 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapState } from 'vuex'
 // @ is an alias to /src
-import { WXJSSDK } from "@/mixins/wx_jssdk.js";
-import store from "@/store";
-import { switchTabActive } from "@/store/actions";
+import { WXJSSDK } from '@/mixins/wx_jssdk.js'
+import store from '@/store'
+import { switchTabActive } from '@/store/actions'
 
 export default {
-  data() {
-    return {};
+  data () {
+    return {}
   },
   computed: {
     ...mapState({
@@ -33,22 +33,22 @@ export default {
     })
   },
   mixins: [WXJSSDK],
-  mounted: function() {
-    var that = this;
-    that.$nextTick(function() {
-      console.log("about nextTick");
+  mounted: function () {
+    var that = this
+    that.$nextTick(function () {
+      console.log('about nextTick')
       switchTabActive(store, {
-        active: "about"
-      });
-      var currentRoute = that.$f7route;
-      console.log("about router", currentRoute);
-      that.$f7router.back();
-      var title = "我是关于页面标题";
-      var link = "http://fullstack.cn"; // 分享链接的根域名，必须与对应的微信公众号网页js安全域名保持一致
-      var imgUrl = "http://cdn.framework7.cn/i/aplt.png";
-      var desc = "我是关于页面内容";
-      that.updateShareConfig(title, link, imgUrl, desc);
-    });
+        active: 'about'
+      })
+      var currentRoute = that.$f7route
+      console.log('about router', currentRoute)
+      that.$f7router.back()
+      var title = '我是关于页面标题'
+      var link = 'http://fullstack.cn' // 分享链接的根域名，必须与对应的微信公众号网页js安全域名保持一致
+      var imgUrl = 'http://cdn.framework7.cn/i/aplt.png'
+      var desc = '我是关于页面内容'
+      that.updateShareConfig(title, link, imgUrl, desc)
+    })
     // this.$f7ready(f7 => {
     //   console.log("home f7 ready");
     //   this.$f7.dialog.alert("f7 ready");
@@ -63,5 +63,5 @@ export default {
     // });
   },
   methods: {}
-};
+}
 </script>

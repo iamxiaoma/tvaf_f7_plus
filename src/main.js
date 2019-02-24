@@ -7,16 +7,15 @@ import Framework7 from 'framework7/framework7.esm.bundle.js'
 
 import 'framework7-icons'
 
-
 // Import F7 Vue Plugin
 import Framework7Vue from 'framework7-vue/framework7-vue.esm.bundle.js'
 
 // Import F7 Styles
-import Framework7Styles from 'framework7/css/framework7.css'
+import 'framework7/css/framework7.css'
 
 // Import Icons and App Custom Styles
-import IconsStyles from './css/icons.css'
-import AppStyles from './css/app.css'
+import './css/icons.css'
+import './css/app.css'
 
 import app from './app.vue'
 import store from './store'
@@ -41,7 +40,7 @@ document.addEventListener('plusready', function () {
   plusReady(store, {
     'isReady': true
   })
-  //仅支持竖屏显示
+  // 仅支持竖屏显示
   window.plus.screen.lockOrientation('portrait-primary')
   // 隐藏滚动条
   window.plus.webview.currentWebview().setStyle({
@@ -53,7 +52,7 @@ const messages = {
   en,
   zh
 }
-//console.log('messages', messages)
+// console.log('messages', messages)
 
 // Init F7 Vue Plugin
 Framework7.use(Framework7Vue, {
@@ -83,8 +82,7 @@ setWeixin(store, {
   'weixin': ua.indexOf('micromessenger') > 0
 })
 
-
-Vue.config.productionTip = false
+Vue.config.productionTip = true
 
 // 网页调试模式下，直接初始化
 // Init App
@@ -96,7 +94,7 @@ new Vue({
 
 axios.defaults.baseURL = 'http://api.fullstack.cn/mp/' // 接口请求根域名
 axios.defaults.timeout = 30000 // 接口请求超时时间，毫秒
-axios.defaults.headers.common['Token'] = cache.get('token') || "" // 接口请求的 token
+axios.defaults.headers.common['Token'] = cache.get('token') || '' // 接口请求的 token
 // Add a request interceptor
 axios.interceptors.request.use(config => {
   return config
@@ -111,7 +109,6 @@ axios.interceptors.response.use(response => {
 }, error => {
   return Promise.reject(error)
 })
-
 
 window.addEventListener('resize', function () {
   console.log('resize')

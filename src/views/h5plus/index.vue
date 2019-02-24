@@ -1,5 +1,11 @@
 <template>
-  <f7-page name="home" :no-navbar="noNavbar" :no-toolbar="noToolbar" @page:init="init" @page:reinit="reinit">
+  <f7-page
+    name="h5plus"
+    :no-navbar="noNavbar"
+    :no-toolbar="noToolbar"
+    @page:init="init"
+    @page:reinit="reinit"
+  >
     <f7-navbar>
       <f7-nav-title>{{$t('app.page.h5plus')}}</f7-nav-title>
     </f7-navbar>
@@ -43,7 +49,7 @@ export default {
       switchTabActive(store, {
         active: "h5plus"
       });
-      //this.$f7.dialog.alert("f7 ready");
+      // this.$f7.dialog.alert("f7 ready");
       // 切换语言
       // console.log("this.$i18n", this.$i18n);
       // this.$i18n.locale = "en";

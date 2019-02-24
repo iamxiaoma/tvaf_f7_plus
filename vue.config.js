@@ -13,7 +13,7 @@ const resolve = dir => {
 // 需要将它改为'/my-app/'
 // 构建之后若是要打包成 App 的，则需要把 BASE_URL = './'
 const BASE_URL = process.env.NODE_ENV === 'production'
-  ? './'
+  ? '/'
   : './'
 
 module.exports = {
@@ -24,7 +24,7 @@ module.exports = {
   // sub-path here. For example, if your app is deployed at
   // https://www.foobar.com/my-app/
   // then change this to '/my-app/'
-  baseUrl: BASE_URL,
+  publicPath: BASE_URL,
   // tweak internal webpack configuration.
   // see https://github.com/vuejs/vue-cli/blob/dev/docs/webpack.md
   chainWebpack: config => {

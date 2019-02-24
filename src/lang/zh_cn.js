@@ -13,7 +13,7 @@ export default {
       password: '登录密码',
       retrieve_password: '找回密码',
       login_btn: '登录',
-      back_to_home: '去首页',
+      back_to_home: '去首页'
     },
     language: {
       ok: '确 定',
