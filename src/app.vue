@@ -160,8 +160,7 @@ export default {
         }
       },
       pushState: true, // 打包 app 的情况下，必须关闭 pushState 模式
-      // pushStateRoot: "http://localhost:8080",
-      pushStateRoot: "http://h5.szbookmall.fullstack.cn",
+      pushStateRoot: "http://localhost:8080",
       pushStateSeparator: ""
     };
   },
